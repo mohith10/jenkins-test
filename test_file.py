@@ -1,3 +1,4 @@
+import xmlrunnner
 import unittest
 import calc
 
@@ -24,4 +25,4 @@ class TestCalc(unittest.TestCase):
         self.assertRaises(ValueError, calc.divide, 10, 0)
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(testRunner=xmlrunner.XMLTestRunner(output='test-reports'))
