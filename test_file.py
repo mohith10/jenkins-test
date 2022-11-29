@@ -20,7 +20,7 @@ class TestCalc(unittest.TestCase):
     def test_divide(self):
         self.assertEqual(calc.divide(14, 7), 2)
         self.assertEqual(calc.divide(9,3), 3)
-        self.assertEqual(calc.divide(60,6), 10)
+        self.assertEqual(calc.divide(60,6), 5)
         self.assertRaises(ValueError, calc.divide, 10, 0)
 
 if __name__ == '__main__':
