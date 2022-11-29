@@ -5,6 +5,7 @@ pipeline{
 			steps{
 				echo 'Building your python application'
 				sh 'python3 hello.py'
+				sh 'java -version'
 			}
 		}	
 	}
