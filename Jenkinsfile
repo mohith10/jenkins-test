@@ -4,9 +4,13 @@ pipeline{
 		stage("Build"){
 			steps{
 				echo 'Building your python application'
-				sh 'python3 hello.py'
-				sh 'java -version'
+				sh 'python3 -m py_compile cli.py calc.py'
 			}
-		}	
+		}
+		stage("Test"){
+			steps{
+				echo 'Testing your python appliction' 
+			}
+		}
 	}
 }
