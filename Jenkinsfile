@@ -1,23 +1,13 @@
 pipeline{
 	agent any
-	parameters{
-		choice(name:'Version', choices: ['1.0', '2.0', '3.0'], description:'Pick version')
-	}
 	stages{
-		stage("build"){
+		stage("Build"){
 			steps{
-				echo 'buildingggg'
+				echo 'Building your python application'
 			}
-		}
-		stage("test"){
 			steps{
-				echo 'testing'
+				sh 'python hello.py'
 			}
-		}
-		stage("deploy"){
-			steps{
-				echo "deploying the version ${params.Version}"
-			}
-		}
+		}	
 	}
 }
