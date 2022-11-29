@@ -10,6 +10,13 @@ pipeline{
 		stage("Test"){
 			steps{
 				echo 'Testing your python appliction' 
+				sh 'python3 test_file.py'
+			}
+		}
+		stage('Release'){
+			steps{
+				echo 'Releasing your application'
+				
 			}
 		}
 	}
