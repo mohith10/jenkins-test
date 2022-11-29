@@ -16,7 +16,7 @@ pipeline{
 		stage('Release'){
 			steps{
 				echo 'Releasing your application'
-				
+				sh 'ls -a'
 			}
 		}
 	}
