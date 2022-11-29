@@ -1,13 +1,10 @@
 import calc
 import sys
 
-
-
-
 totalArgs = len(sys.argv)
 if totalArgs < 4 :
     print('Insufficient argumenets')
-    exit()
+    exit
 else:
     numA = int(sys.argv[2])
     numB = int(sys.argv[3])
