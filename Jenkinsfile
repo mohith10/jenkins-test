@@ -20,11 +20,5 @@ pipeline{
 				sh 'python3 -m PyInstaller cli.py'
 			}
 		}
-		stage('Running'){
-			steps{
-				echo 'Running your application'
-				sh './dist/cli 1 5 6'
-			}
-		}
 	}
 }
