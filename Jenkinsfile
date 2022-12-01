@@ -10,13 +10,20 @@ pipeline{
 		stage("Test"){
 			steps{
 				echo 'Testing your python appliction' 
-				sh 'python3 test_file.py'
+				sh 'python3 -m pytest test_file.py --junitxml Test_Result_${BUILD_NUMBER}.xml'
+				sh 'cat Test_Result_${BUILD_NUMBER}.xml'
 			}
 		}
-		stage('Release'){
+		stage('Packaging'){
 			steps{
-				echo 'Releasing your application'
-				sh 'ls -a'
+				echo 'Packaging your application'
+				sh 'python3 -m PyInstaller cli.py'
+			}
+		}
+		stage('Running'){
+			steps{
+				echo 'Running your application'
+				sh './dist/cli 1 5 6'
 			}
 		}
 	}

@@ -1,5 +1,4 @@
 import calc
-import sys
 
 
 numA = int(input('Enter first number: '))
