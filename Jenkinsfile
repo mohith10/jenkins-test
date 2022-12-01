@@ -17,7 +17,7 @@ pipeline{
 		stage('Packaging'){
 			steps{
 				echo 'Packaging your application'
-				sh 'python3 -m PyInstaller cli.py'
+			
 			}
 		}
 	}
